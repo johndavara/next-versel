@@ -1,18 +1,20 @@
+import { FC, PropsWithChildren } from "react";
 
-type Props = {
-  children?: React.ReactNode
-};
-const DarkLayout :  React.FC<Props> = ({ children }) => {
+const Darklayout : FC<PropsWithChildren> = ({ children }) => {
   return (
-    <div style={{
-        backgroundColor: 'rgba(0,0,0,0.3)',
-        padding: '10px',
-        borderRadius: '10px'
-    }}>
-        <h3>Dark Layout</h3>
-      {children}
+    <div
+      style={{
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        borderRadius: '5px',
+        padding: '10px'
+      }}
+    >
+      <h3>Darklayout</h3>
+      <div>
+        {children}
+      </div>
     </div>
-  );
+  )
 }
 
-export default DarkLayout;
+export default Darklayout;
